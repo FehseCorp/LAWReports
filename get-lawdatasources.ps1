@@ -1,6 +1,4 @@
-
-# parameters for script
-# name of output file
+# get-lawdatasources.ps1
 param (
     [string]$outputfile="datasources.csv",
     [switch]$debug
@@ -84,10 +82,4 @@ foreach ($sub in $subs) {
             "$($ws.name),$($ws.SubscriptionId),$($ws.ResourceGroupName),""No datasources found""" | Out-File -FilePath $outputfile -Append
         }
     }
-    #Invoke-AzRestMethod -SubscriptionId $
-    #GET https://management.azure.com/subscriptions/6c64f9ed-88d2-4598-8de6-7a9527dc16ca/resourcegroups/loganalytics/providers/Microsoft.OperationalInsights/workspaces/mseye/dataSources?%24filter=kind%20eq%20%27windowsPerformanceCounter%27%20or%20kind%20eq%20%27WindowsEvent%27%20or%20kind%20eq%20%27IISLogs%27%20or%20kind%20eq%20%27LinuxPerformanceObject%27%20or%20kind%20eq%20%27LinuxSyslog%27&api-version=2020-08-01
 }
-
-<# 
-kind eq 'windowsPerformanceCounter' or kind eq 'WindowsEvent' or kind eq 'IISLogs' or kind eq 'LinuxPerformanceObject' or kind eq 'LinuxSyslog'
-#>
