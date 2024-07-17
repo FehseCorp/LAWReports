@@ -5,7 +5,7 @@ This script is used to query all log analytics workspaces in a tenant and look f
 
 Usage example:
 
-```powershell ./get-datasources -outputfile 'file.csv'```
+```./get-datasources -outputfile 'file.csv'```
 
 Dependencies:
 
@@ -13,3 +13,14 @@ Dependencies:
 - Powershell
 
 Using the Azure CLI in Powershell mode is recommended.
+
+Instructions:
+Open an Azure CLI session and run the following command:
+
+```(invoke-webrequest -URI https://raw.githubusercontent.com/FehseCorp/LAWReports/main/get-lawdatasources.ps1).content | out-file get-lawdatasources.ps1```
+
+Then run the script with the desired output file name.
+
+```./get-lawdatasources.ps1```
+
+Then run the script with the desired output file name.
