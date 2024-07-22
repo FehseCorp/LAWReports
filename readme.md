@@ -1,4 +1,8 @@
 
+# WorkspaceAuditExtended.json
+
+This file is a pre-release version of the workbook here: https://github.com/microsoft/AzureMonitorCommunity/tree/master/Azure%20Services/Log%20Analytics%20workspaces/Workbooks
+
 # get-lawdatasources.ps1
 
 This script is used to query all log analytics workspaces in a tenant and look for legacy data sources. It will output the workspace name, subscription Id, resource group, and data sources that are not supported in the new log analytics query language.
